@@ -1,0 +1,239 @@
+/* Обертка для текста и картинки */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  gap: 50px;
+}
+
+/* Текст слева */
+.welcome-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Картинка справа */
+.welcome-image {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Заголовок */
+.big-title {
+  font-size: 48px;
+  color: #ff4500;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Подзаголовок */
+.subtitle {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 40px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Форма логина */
+.login-form {
+  display: flex;
+  gap: 10px;
+}
+
+.input-field {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.login-button {
+  padding: 12px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+  background-color: #e63e00;
+}
+
+/* Плавное появление */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Вторая секция - проекты */
+.projects-section {
+  min-height: 100vh;
+  background: #f9f9f9;
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+/* Блок одной работы */
+.project-block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Картинка проекта */
+.project-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Текст проекта */
+.project-text {
+  flex: 1;
+}
+
+.project-text h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ff4500;
+}
+
+.project-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Анимация появления */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.editor-section {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Общие стили для всех секций */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Секция StoryEditor */
+.story-editor {
+  min-height: 100vh;
+  padding: 100px 50px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-editor h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Инпуты для истории */
+.story-input, .story-textarea {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.story-textarea {
+  min-height: 200px;
+}
+
+/* Кнопка "Сохранить" */
+.save-button {
+  padding: 12px 20px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.save-button:hover {
+  transform: scale(1.05);
+  background-color: #e63e00;
+}
+
+/* Сохранённая история */
+.saved-story {
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.saved-story h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.saved-story p {
+  font-size: 18px;
+  color: #555;
+}
