@@ -17,6 +17,26 @@ function StoryEditor() {
     }
   };
 
+  const handleGenerateStory = async () => {
+    const prompt = `Continue this story: ${storyContent}`;
+    try {
+      // Запрос на сервер, который работает на Node.js
+      const response = await fetch('http://localhost:5000/generate-story', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: storyContent }),
+      });
+
+      const data = await response.json();
+
+      // Добавление сгенерированного текста в историю
+      setStoryContent(storyContent + "\n\n" + data.choices[0].text);
+    } catch (error) {
+      console.error('Error generating story:', error);
+      alert('Error generating story.');
+    }
+  };
+
   return (
     <div className="story-editor fade-in">
       <h2>Create a New Story</h2>
@@ -35,6 +55,10 @@ function StoryEditor() {
       />
       <button className="save-button" onClick={handleSave}>
         Save Story
+      </button>
+
+      <button className="ai-button" onClick={handleGenerateStory}>
+        Generate Story with AI
       </button>
 
       {savedStory && (
